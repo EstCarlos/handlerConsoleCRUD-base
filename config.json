@@ -1,0 +1,13 @@
+{
+  "campos": {
+    "cantidad": 2
+  },
+  "messages": {
+    "welcomeMessage": "Welcome to the application!",
+    "goodbyeMessage": "Thank you for using the application",
+    "saveMessage": "Saved!!",
+    "editMessage": "Edited Data!!",
+    "errorMessage": "Oops there was an error",
+    "deleteMessage": "Bye bye Charlie"
+  }
+}
