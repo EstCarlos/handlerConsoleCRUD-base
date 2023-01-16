@@ -5,5 +5,4 @@ handlerConsoleCRUD/__init__.py
 handlerConsoleCRUD.egg-info/PKG-INFO
 handlerConsoleCRUD.egg-info/SOURCES.txt
 handlerConsoleCRUD.egg-info/dependency_links.txt
-handlerConsoleCRUD.egg-info/requires.txt
 handlerConsoleCRUD.egg-info/top_level.txt

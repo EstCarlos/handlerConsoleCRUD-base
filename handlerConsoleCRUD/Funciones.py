@@ -142,28 +142,32 @@ def eliminar_registro():
   del registros[id_registro - 1]
   showDelete()
 
-# Funcion principa;
-def screenHandler():
-  num_campos = definir_campos()
-  campos = ingresar_campos(num_campos)
-  while True:
-    showWelcome()
-    print("Seleccione una opción:")
-    print("1. Crear un nuevo registro")
-    print("2. Consultar todos los registros")
-    print("3. Actualizar un registro existente")
-    print("4. Eliminar un registro existente")
-    print("5. Salir")
-    opcion = int(input())
-    if opcion == 1:
-      
-      crear_registro(campos)
-    elif opcion == 2:
-      consultar_registros()
-    elif opcion == 3:
-      actualizar_registro(campos)
-    elif opcion == 4:
-      eliminar_registro()
-    elif opcion == 5:
-      showGoodBye()
-      break
+
+def screenHandler(case_option = None, extension_function = None):
+    num_campos = definir_campos()
+    campos = ingresar_campos(num_campos)
+    while True:
+        showWelcome()
+        print("Seleccione una opción:")
+        opciones = ["1. Crear un nuevo registro", "2. Consultar todos los registros", "3. Actualizar un registro existente", "4. Eliminar un registro existente", "5. Salir"]
+        if extension_function:
+            opciones = extension_function(opciones)
+        for opcion in opciones:
+            if case_option == "upper":
+                opcion = opcion.upper()
+            elif case_option == "lower":
+                opcion = opcion.lower()
+            print(opcion)
+        opcion = int(input())
+        if opcion == 1:
+            crear_registro(campos)
+        elif opcion == 2:
+            consultar_registros()
+        elif opcion == 3:
+            actualizar_registro(campos)
+        elif opcion == 4:
+            eliminar_registro()
+        elif opcion == 5:
+            showGoodBye()
+            break
+
